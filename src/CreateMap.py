@@ -2,7 +2,7 @@ import curses
 
 class CreateMap:
     
-    def CreateMap(self):
+    def create_map(self):
         stdsrc = curses.initscr()
 
         stdsrc.addstr(0 , 0 , "####################")

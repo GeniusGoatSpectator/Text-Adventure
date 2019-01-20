@@ -1,9 +1,9 @@
 import curses
-from CreateMap import CreateMap
+from Player import Player
 
 def main():
-    ObjectMap = CreateMap()
-    ObjectMap.CreateMap()
+    ObjectPayer = Player()
+    ObjectPayer.player()
 
 if __name__ == "__main__":
     stdsrc = curses.initscr()
