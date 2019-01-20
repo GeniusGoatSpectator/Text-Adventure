@@ -9,3 +9,4 @@ if __name__ == "__main__":
     stdsrc = curses.initscr()
     main()
     stdsrc.getch()
+    curses.endwin()
