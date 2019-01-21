@@ -21,7 +21,7 @@ class Player:
         while self.__IsRunning:
             InputKey = self.__stdscr.getch()
 
-            if InputKey == ord("w") or InputKey == ord("W"):
+            if InputKey == ord("w") or InputKey == ord("W") or InputKey == 72:
                 self.__PositionY -= 1
 
                 if self.__PositionY == 0:
@@ -31,7 +31,7 @@ class Player:
                 self.__ObjectMap.create_map()
                 self.__print_player()
 
-            if InputKey == ord("s") or InputKey == ord("S"):
+            if InputKey == ord("s") or InputKey == ord("S") or InputKey == 80:
                 self.__PositionY += 1
 
                 if self.__PositionY == 9:
@@ -41,7 +41,7 @@ class Player:
                 self.__ObjectMap.create_map()
                 self.__print_player()
 
-            if InputKey == ord("a") or InputKey == ord("A"):
+            if InputKey == ord("a") or InputKey == ord("A") or InputKey == 75:
                 self.__PositionX -= 1
 
                 if self.__PositionX == 0:
@@ -51,7 +51,7 @@ class Player:
                 self.__ObjectMap.create_map()
                 self.__print_player()
 
-            if InputKey == ord("d") or InputKey == ord("D"):
+            if InputKey == ord("d") or InputKey == ord("D") or InputKey == 77:
                 self.__PositionX += 1
                 
                 if self.__PositionX == 19:
