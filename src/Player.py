@@ -16,13 +16,14 @@ class Player:
 
     def player(self):
         curses.noecho()
+        self.__stdscr.keypad(True)
         self.__ObjectMap.create_map()
         self.__print_player()
 
         while self.__IsRunning:
             InputKey = self.__stdscr.getch()
 
-            if InputKey == ord("w") or InputKey == ord("W") or InputKey == 0:
+            if InputKey == ord("w") or InputKey == ord("W") or InputKey == curses.KEY_UP:
                 self.__PositionY -= 1
 
                 if self.__PositionY == 0:
@@ -32,7 +33,7 @@ class Player:
                 self.__ObjectMap.create_map()
                 self.__print_player()
 
-            if InputKey == ord("s") or InputKey == ord("S"):
+            if InputKey == ord("s") or InputKey == ord("S") or InputKey == curses.KEY_DOWN:
                 self.__PositionY += 1
 
                 if self.__PositionY == 9:
@@ -42,7 +43,7 @@ class Player:
                 self.__ObjectMap.create_map()
                 self.__print_player()
 
-            if InputKey == ord("a") or InputKey == ord("A"):
+            if InputKey == ord("a") or InputKey == ord("A") or InputKey == curses.KEY_LEFT:
                 self.__PositionX -= 1
 
                 if self.__PositionX == 0:
@@ -52,7 +53,7 @@ class Player:
                 self.__ObjectMap.create_map()
                 self.__print_player()
 
-            if InputKey == ord("d") or InputKey == ord("D"):
+            if InputKey == ord("d") or InputKey == ord("D") or InputKey == curses.KEY_RIGHT:
                 self.__PositionX += 1
                 
                 if self.__PositionX == 19:
