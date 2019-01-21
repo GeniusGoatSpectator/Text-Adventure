@@ -61,6 +61,6 @@ class Player:
                 self.__ObjectMap.create_map()
                 self.__print_player()
 
-            if InputKey == ord("p") or InputKey == ord("P"):
+            if InputKey == 27:
                 self.__IsRunning = False
                 
