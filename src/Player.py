@@ -15,6 +15,7 @@ class Player:
         self.__stdscr.addstr(self.__PositionY , self.__PositionX , self.__Player)
 
     def player(self):
+        curses.noecho()
         self.__ObjectMap.create_map()
         self.__print_player()
 
@@ -63,6 +64,3 @@ class Player:
 
             if InputKey == 27:
                 self.__IsRunning = False
-            
-            else:
-                curses.noecho()
